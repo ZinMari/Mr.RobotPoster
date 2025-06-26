@@ -1,0 +1,106 @@
+.page__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fff;
+  border: 5px solid #000;
+  padding: 20px;
+}
+
+.title-section {
+  background-image: url(./img/text.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 70vw;
+}
+.title-section__title {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: rgb(213, 49, 20);
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+.title-section__title::before {
+  content: "";
+  position: absolute;
+  bottom: 110px;
+  left: 0;
+  height: calc(100% - 110px);
+  border-left: 5px dotted rgb(213, 49, 20);
+}
+
+.photo-section__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 100%;
+}
+@media (max-width: 700px) {
+  .photo-section__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.photo-section__item {
+  position: relative;
+  aspect-ratio: 1/1;
+  border: 1px solid #000;
+  display: flex;
+  background-color: #000000;
+}
+.photo-section__item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 29px);
+  height: calc(100% + 29px);
+}
+.photo-section__item:nth-child(-n+3)::before {
+  border: 3px solid #000;
+}
+@media (max-width: 700px) {
+  .photo-section__item:nth-child(-n+3)::before {
+    border: none;
+  }
+}
+@media (max-width: 700px) {
+  .photo-section__item:nth-child(1)::before, .photo-section__item:nth-child(3)::before, .photo-section__item:nth-child(5)::before {
+    border: 3px solid #000;
+  }
+}
+.photo-section__item_type_white {
+  background-color: #fff;
+}
+.photo-section__item img {
+  color: #fff;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(1.5) grayscale(100%) contrast(200%);
+}
+
+.text-section {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  font-size: 10px;
+  border-bottom: 5px dotted #000;
+}
+.text-section p {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+}
+.text-section p:last-child span:last-child {
+  justify-self: end;
+  align-self: end;
+}
+.text-section span {
+  text-transform: uppercase;
+  font-weight: bold;
+}
