@@ -12,17 +12,19 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 70vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 }
 .title-section__title {
   position: relative;
   font-family: sans-serif;
   font-size: 20px;
-  color: rgb(213, 49, 20);
+  color: #EB4325;
   text-transform: uppercase;
   writing-mode: vertical-lr;
   height: 100%;
-  display: flex;
-  justify-content: end;
+  text-align: end;
 }
 .title-section__title::before {
   content: "";
@@ -30,7 +32,15 @@
   bottom: 110px;
   left: 0;
   height: calc(100% - 110px);
-  border-left: 5px dotted rgb(213, 49, 20);
+  border-left: 5px dotted #EB4325;
+  z-index: 10;
+}
+.title-section__logo {
+  max-width: 15vw;
+  font-size: 0;
+}
+.title-section__logo img {
+  width: 100%;
 }
 
 .photo-section__list {

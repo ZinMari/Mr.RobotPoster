@@ -1,4 +1,4 @@
-$color-red: rgb(213 49 20);
+$color-red: #EB4325;
 
 .page {
     &__container {
@@ -15,7 +15,10 @@ $color-red: rgb(213 49 20);
     background-image: url(./img/text.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 70vw;
+    height: 70vw;    
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
 
     &__title {
         position: relative;
@@ -25,8 +28,7 @@ $color-red: rgb(213 49 20);
         text-transform: uppercase;
         writing-mode: vertical-lr;
         height: 100%;
-        display: flex;
-        justify-content: end;
+        text-align: end;
 
         &::before {
             content: '';
@@ -35,6 +37,16 @@ $color-red: rgb(213 49 20);
             left: 0;
             height: calc(100% - 110px);
             border-left: 5px dotted $color-red;
+            z-index: 10;
+        }
+    }
+
+    &__logo {
+        max-width: 15vw;
+        font-size: 0;
+
+        img {
+            width: 100%;
         }
     }
 }
